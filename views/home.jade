@@ -1,0 +1,14 @@
+- if (!everyauth.loggedIn)
+  h2 Not Authenticated
+
+  #vkontakte-login
+    a(href='/auth/vkontakte', style='border: 0')
+        img(style='border: 0; width: 40', src='http://cs424830.vk.me/v424830492/6803/DgD9N8W8Ces.jpg')
+
+- else
+  h2 Authenticated
+  - if (everyauth.vkontakte)
+    h3 Vkontakte
+    p= JSON.stringify(everyauth.vkontakte.user)
+  h3
+    a(href='/logout') Logout

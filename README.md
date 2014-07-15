@@ -1,0 +1,1 @@
+# Simple Everyauth Vkontakte example
